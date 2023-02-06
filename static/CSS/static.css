@@ -1,0 +1,88 @@
+:root{
+    --primary-background:#0d6efd;
+    --secondary-background:#e6e6ea;
+    --primary-color-font:#121625;
+    --secondary-color-font:#e6e6ea;
+
+
+
+
+}
+
+.img_background{
+    background-image: url('/static/img/students.jpg');
+    
+    background-position:center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} 
+
+.search-form {
+    position:static;
+    justify-content: center; 
+    align-items: center;
+    margin-left: 20%; 
+}
+.search-bar-notes{
+    width: 50%;
+}
+
+.addstu{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20%;
+}
+
+
+.alum{
+    color: white;
+    text-align:start;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 1px;
+    align-items: center;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+}
+.li-stu{
+    margin: 5px;
+    padding: 5px;    
+    color: white;
+    font-size: 30px;
+    text-align: justify;    
+    text-decoration: none;
+    border: solid;
+    
+    
+}
+.liststu{
+    margin: 10px;
+    padding: 10px;    
+    color: white;
+  
+}
+div h1 .welcome{
+    color:var(--secondary-color-font);
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 2px;
+}
+.h1welcome{
+    color: var(--primary-background);
+    font-size: 70px;
+    text-align: center;
+}
+.pwelcome{
+    color: var(--primary-background);
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
+}
+
+
+

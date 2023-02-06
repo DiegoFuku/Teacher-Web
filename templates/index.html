@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+
+{% block 'title' %}HOME{% endblock 'title' %}
+
+
+{% block 'content' %}
+<div class="jumbotron">
+    <div class="container">
+      <h1 class="h1welcome">Welcome to Grading System</h1>
+      <p class="pwelcome">system created to calculate student grades</p>      
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+        <a href="{% url 'notes' %}" class="btn btn-success">Enter site</a>
+      </div>
+</div>
+
+
+{% endblock 'content' %}    

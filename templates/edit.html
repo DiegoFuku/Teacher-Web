@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+
+{% block 'title' %}Edit Student{% endblock 'title' %}
+{% block 'styles' %}
+    <link rel="stylesheet" href="/static/CSS/form.css">
+{% endblock %} 
+
+
+{% block 'content' %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="alert alert-success"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<spam class="aux-btns"><a href="{% url 'notes' %}">Back</a></spam>
+<div class="container -md">
+    <form action={% url 'edit' id=id %} method="POST">
+        {% csrf_token %}
+        <table>
+        {{form.as_table}}        
+        </table>
+        <div class="btn-submit">
+        <input type="submit" value="Send" id="btnsend" class="btn btn-primary"/>
+        </div>    
+        
+    </form>
+
+</div>
+{% endblock 'content' %}    

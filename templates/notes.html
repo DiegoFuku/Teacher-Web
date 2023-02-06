@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block 'title' %}Students{% endblock 'title' %}
+{% load static %}
+{% block 'content' %}
+<form class="search-form" method="GET" action="{% url 'notes' %}">
+    <input type="text" class="search-bar-notes" name="search" placeholder="Search student">
+    <input type="submit" value="Search" class="btn btn-primary" />
+</form>
+<spam class="addstu">
+    <a href={% url 'create' %} id="addstudent" class="btn btn-success">Add Student</a>    
+</spam> 
+<br>
+
+
+<div class="container-fluid ">
+    <table>
+        <ul class="list row align-items-center">
+            {% for student in students %}
+            <li class="alum"> {{ student.name }} {{ student.curse }}</li>
+            <spam>
+                <a href="{% url 'view' id=student.id %}" class="btn btn-primary">Enter</a>
+                <a href="{% url 'edit' id=student.id %}" class="btn btn-warning">Edit</a>
+                <a href="{% url 'delete' id=student.id %}" class="btn btn-danger">Delete</a>
+
+
+            </spam>
+            {% endfor %}
+        </ul>        
+    </table>    
+    
+</div>
+
+{% endblock 'content' %}

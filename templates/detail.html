@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block 'title' %}Info Student {{sutdent.name}} {% endblock 'title' %}
+
+{% block 'content' %}
+<spam class="aux-btns"><a href="{% url 'notes' %}">Back</a></spam>
+<ul class="liststu">
+    <li class="li-stu"><b> NAME:  </b>  {{student.name}}</li> 
+    <li class="li-stu"><b>CURSE:  </b>  {{student.curse}}</li> 
+    <li class="li-stu"><b>First Mark:  </b>  {{student.first_mark}}</li> 
+    <li class="li-stu"><b>Second Mark:   </b> {{student.second_mark}}</li> 
+    <li class="li-stu"><b>Third Mark:   </b> {{student.third_mark}}</li> 
+    <li class="li-stu"><b>Homework:  </b>  {{student.homework}}</li> 
+    <li class="li-stu"><b>Average:  </b>  {{student.average_mark}}</li> 
+    <li class="li-stu"><b>Comments:  </b> {{student.comments}}</li> 
+</ul>
+{% endblock %}
